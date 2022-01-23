@@ -1,0 +1,110 @@
+:root {
+    --main: hsl(31, 77%, 52%);
+    --secondary: hsl(184, 100%, 22%);
+    --dark: hsl(179, 100%, 13%);
+    /* neutrals */
+    --neutral: hsla(0, 0%, 100%, 0.75);
+    --neutral-light: hsl(0, 0%, 95%);
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--neutral-light);
+    font-size: 1rem;
+    min-height: 100vh;
+    color: var(--neutral-light);
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+img {
+    margin-bottom: 1rem;
+}
+
+/* Container */
+.container {
+    min-height: inherit;
+    display: grid;
+    padding: 2.5rem 1rem;
+    font-size: .8rem;
+}
+
+/* Columns */
+.column > * {
+    height: 100%;
+    padding: 2.5em;
+}
+
+/* Specific columns */
+.sedan {
+    background: var(--main);
+}
+
+.suv {
+    background: var(--secondary)
+}
+
+.luxury {
+    background: var(--dark);
+}
+
+/* Text */
+.title {
+    color: var(--neutral-light);
+    font-family: 'Big Shoulders Display', cursive;
+    line-height: 1em;
+}
+
+.content{
+    line-height: 2em;
+    margin: 1.8em 0;
+}
+/* Button Style */
+.btn {
+    display: block;
+    background: var(--neutral-light);
+    padding: .7em 1.5em;
+    width: fit-content;
+    border-radius: 50px;
+    text-decoration: none;
+}
+
+.sedan .btn {
+    color: var(--main);
+}
+
+.suv .btn {
+    color: var(--secondary);
+}
+
+.luxury .btn {
+    color: var(--dark);
+}
+
+
+/* Attribution */
+.attribution {
+    background: var(--neutral);
+    color: var(--dark);
+    width: 100%;
+
+    position:fixed;
+    bottom: 0;
+    right: 0;
+}
+
+.attribution a {
+    color: var(--secondary);
+    text-decoration: none;
+}
+
+
+@media (min-width:40rem){
+    .container {
+        grid-template-columns: repeat(3,1fr);
+    }
+}
