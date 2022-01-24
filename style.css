@@ -32,7 +32,7 @@ body {
 }
 
 img {
-    max-width: 100%;
+    max-width: 30%;
 }
 
 h1 {
@@ -85,12 +85,14 @@ h1 {
 }
 
 .card-list {
-    margin: 2rem 0;
     font-size: .8rem;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform .7s ease-in;
 }
 
 .card {
-    padding: 1rem;
+    padding: 2rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -100,6 +102,18 @@ h1 {
 .card-body {
     display: grid;
     row-gap: 1.3rem;
+}
+
+/* Text */
+.title {
+    line-height: 1em;
+}
+
+.text {
+    font-size: .8em;
+    max-width: 25ch;
+    line-height: 2em;
+    color: var(--neutral);
 }
 
 /* -------------- Attribution */
@@ -126,10 +140,18 @@ h1 {
     .card-list {
         display: grid;
         grid-template-columns: repeat(3,1fr);
+        transform: scale(1.7);
     }
 
     .card {
         max-width: 70vw;
-        margin: 2em auto;
+        gap:3rem
     }
+}
+
+@media (min-width:41rem) and (max-width:60rem) {
+    
+   .card-list {
+       transform: scale(1);
+   }
 }
