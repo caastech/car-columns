@@ -140,7 +140,7 @@ h1 {
     .card-list {
         display: grid;
         grid-template-columns: repeat(3,1fr);
-        transform: scale(1.7);
+        transform: scale(1.2);
     }
 
     .card {
